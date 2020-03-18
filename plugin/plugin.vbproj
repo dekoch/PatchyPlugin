@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{104A8240-EED0-4200-8B4B-BF7A094B6021}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>plugin</RootNamespace>
+    <AssemblyName>plugin</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ivi.Visa.Interop">
+      <HintPath>.\Ivi.Visa.Interop.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\clsBUER2.vb" />
+    <Compile Include="Class\clsAVRNETIO.vb" />
+    <Compile Include="Class\clsAgilent34450.vb" />
+    <Compile Include="Class\clsMeasure.vb" />
+    <Compile Include="Class\clsVISA.vb" />
+    <Compile Include="Class\clsTCPClient.vb" />
+    <Compile Include="Class\clsTCPServer.vb" />
+    <Compile Include="frmCOM.Designer.vb">
+      <DependentUpon>frmCOM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCOM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLauncher.Designer.vb">
+      <DependentUpon>frmLauncher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLauncher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMeasure.designer.vb">
+      <DependentUpon>frmMeasure.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMeasure.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMeasureSource.Designer.vb">
+      <DependentUpon>frmMeasureSource.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMeasureSource.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTCP.designer.vb">
+      <DependentUpon>frmTCP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTCP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IO.vb" />
+    <Compile Include="Class\clsMultical.vb" />
+    <Compile Include="main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.vb">
+      <DependentUpon>main.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class\clsCOM.vb" />
+    <Compile Include="Class\clsFluke45.vb" />
+    <Compile Include="Class\clsHBS.vb" />
+    <Compile Include="Module\modLog.vb" />
+    <Compile Include="Module\modMeasure.vb" />
+    <Compile Include="Module\modIO.vb" />
+    <Compile Include="Module\modSource.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UserControl\ucCOM.Designer.vb">
+      <DependentUpon>ucCOM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucCOM.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl\ucManualControl.Designer.vb">
+      <DependentUpon>ucManualControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl\ucManualControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="var.vb" />
+    <Compile Include="XML.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmCOM.resx">
+      <DependentUpon>frmCOM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLauncher.resx">
+      <DependentUpon>frmLauncher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMeasure.resx">
+      <DependentUpon>frmMeasure.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMeasureSource.resx">
+      <DependentUpon>frmMeasureSource.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTCP.resx">
+      <DependentUpon>frmTCP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucCOM.resx">
+      <DependentUpon>ucCOM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl\ucManualControl.resx">
+      <DependentUpon>ucManualControl.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="changelog.txt" />
+    <Content Include="Resources\favicon.ico" />
+    <None Include="Resources\Ivi.Visa.Interop.dll" />
+    <None Include="Resources\plugin.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,13 @@
+changelog:
+
+v2.471:
+ change-> Agilent34450: bereichseinstellung kann nun manuell vorgenommen werden (default: auto)
+  z.B. #MEAS0_SET_A_AC 1A -> 1A Messbereich
+  z.B. #MEAS0_SET_A_AC auto -> automatische auswahl messbereich
+ add-> schreibt bei #LOG_WRITE... die ID nach meas0, meas1,...
+
+v2.470:
+ add-> #LOG_WRITE-FILE
+
+v2.458:
+ ohne VISA
